@@ -11,7 +11,7 @@
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
-    --spacing-xl: 4rem;
+    --spacing-xl: 2rem;
   }
   
   * {
@@ -126,6 +126,55 @@
     
     .mobile-menu-toggle {
       display: block;
+    }
+    .sticky-header{
+        justify-content:center!important;
+        box-shadow: 0 2px 10px black!important;
+    }
+    .container{
+        text-align: center;
+    }
+.hero-image{
+    display: none;
+}
+.menu-categories{
+    gap: 6px!important;
+}
+.hero-text{
+    text-align: center;
+    margin-bottom: 10px;
+}
+    .sticky-header nav ul li {
+        display: none;
+    }
+    
+    .sticky-header nav ul li.call-order-item {
+        display: block;
+    }
+    
+    .sticky-header nav ul {
+        justify-content: flex-end;
+    }
+    
+    .btn-call-order {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: var(--border-radius);
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+    }
+    
+    .btn-call-order:before {
+        content: "";
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-image: url('phone-icon.svg');
+        background-size: contain;
+        margin-right: 5px;
     }
   }
   
@@ -294,6 +343,29 @@
     color: white;
     transform: translateY(-2px);
   }
+  
+  .pizza-slider {
+    width: 100%;
+    padding-bottom: 50px;
+    margin-top: 2rem;
+}
+.swiper{
+    padding: 10px!important;
+}
+.swiper-slide {
+    height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ff000042!important;
+    scale:0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+}
+
   
   /* About Section */
   .about {
@@ -795,6 +867,28 @@ margin-bottom: 5px;
     gap: 3rem;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+    .story-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .story-image {
+        margin-bottom: 2rem;
+    }
+    
+    .story-image img {
+        width: 100%;
+        height: auto!important;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .story-content {
+        padding: 2rem 1.5rem;
+    }
+}
+
 
 .story-image {
     border-radius: var(--border-radius);

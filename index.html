@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Autentyczna włoska pizzeria oferująca darmową dostawę. Spróbuj naszych tradycyjnych włoskich dań przygotowanych z miłością.">
     <title>Na okrągło - Autentyczna Włoska Pizzeria</title>
-    <link rel="stylesheet" href="https://piotrholowienko.github.io/naokroglo/styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script defer src="https://piotrholowienko.github.io/naokroglo/script.js"></script>
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <header class="sticky-header">
         <div class="logo-container">
-            <img src="https://piotrholowienko.github.io/naokroglo/logo.jpg" alt="Na okrągło Logo" class="logo">
+            <img src="/logo.jpg" alt="Na okrągło Logo" class="logo">
         </div>
         <nav>
             <ul>
                 <li><a href="#menu" class="btn-menu">Co gotujemy?</a></li>
                 <li><a href="#location" class="btn-location">Jak nas znaleźć?</a></li>
-                <li><a href="tel:0048575757022" class="btn-call">Zadzwoń i zamów z odbiorem</a></li>
+                <li class="call-order-item"><a href="tel:0048575757022" class="btn-call">Zadzwoń i zamów z odbiorem</a></li>
                 
                 <!-- <li><a href="#order" class="btn-order">Zamów online</a></li> -->
             </ul>
@@ -32,14 +35,14 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="logo-container-hero">
-                        <img src="https://piotrholowienko.github.io/naokroglo/logo.jpg" alt="Na okrągło Logo" class="logo">
+                        <img src="/logo.jpg" alt="Na okrągło Logo" class="logo">
                     </div>
                     <h1>Najlepsza pizza w Lidzbarku Warmińskim</h1>
                     <p>Świeże składniki, autentyczne włoskie smaki, prosto od producentów z Italii.</p>
                     <a href="#order" class="btn-primary">ZAMÓW TERAZ Z ODBIOREM</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://piotrholowienko.github.io/naokroglo/tlo.jpeg" alt="Pyszna włoska pizza">
+                    <img src="/tlo.jpeg" alt="Pyszna włoska pizza">
                 </div>
             </div>
         </section>
@@ -51,6 +54,7 @@
                 <a href="#story" class="btn-secondary">POZNAJ NAS</a>
             </div>
         </section> -->
+
         <section id="menu" class="menu-section">
             <div class="container">
                 <h2>NASZE MENU</h2>
@@ -64,7 +68,7 @@
                 <div class="menu-items-container active" id="pizza-menu">
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/1.png" alt="Pizza Margherita" loading="lazy">
+                            <img src="/1.png" alt="Pizza Margherita">
                         </div>
                         <div class="menu-item-details">
                             <h3>Margherita <span class="price">29 zł</span></h3>
@@ -75,29 +79,18 @@
                     
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/2.png" alt="Pizza Pepperoni" loading="lazy">
+                            <img src="/2.png" alt="Pizza Pepperoni" >
                         </div>
                         <div class="menu-item-details">
                             <h3>Pepperoni <span class="price">35 zł</span></h3>
-                            <p class="ingredients">Sos pomidorowy, mozzarella, pepperoni</p>
+                            <p class="ingredients">Sos pomidorowy, mozzarella, pepperoni, oregano</p>
                             <button class="add-to-cart">Dodaj do koszyka</button>
                         </div>
                     </div>
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/3.png" alt="Pizza Margherita" loading="lazy">
-                        </div>
-                        <div class="menu-item-details">
-                            <h3>Cotto <span class="price">39 zł</span></h3>
-                            <p class="ingredients">Sos pomidorowy, mozzarella, cotto, bazylia, oliwa z oliwek</p>
-                            <button class="add-to-cart">Dodaj do koszyka</button>
-                        </div>
-                    </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/2.png" alt="Pizza Margherita" loading="lazy">
+                            <img src="/3.png" alt="Pizza Margherita" >
                         </div>
                         <div class="menu-item-details">
                             <h3>Margherita <span class="price">29 zł</span></h3>
@@ -108,7 +101,18 @@
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/3.png" alt="Pizza Margherita" loading="lazy">
+                            <img src="/2.png" alt="Pizza Margherita" >
+                        </div>
+                        <div class="menu-item-details">
+                            <h3>Margherita <span class="price">29 zł</span></h3>
+                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="/3.png" alt="Pizza Margherita" >
                         </div>
                         <div class="menu-item-details">
                             <h3>Margherita <span class="price">29 zł</span></h3>
@@ -120,7 +124,7 @@
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/1.png" alt="Pizza Margherita" loading="lazy">
+                            <img src="/1.png" alt="Pizza Margherita" >
                         </div>
                         <div class="menu-item-details">
                             <h3>Margherita <span class="price">29 zł</span></h3>
@@ -128,11 +132,98 @@
                             <button class="add-to-cart">Dodaj do koszyka</button>
                         </div>
                     </div>
+                
+                </div>
                     
-                    <!-- Więcej pozycji menu -->
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2>NASZE MENU - slider</h2>
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="pizza">Pizza</button>
+                    <button class="category-btn" data-category="pasta">Makarony</button>
+                    <button class="category-btn" data-category="salads">Sałatki</button>
+                    <button class="category-btn" data-category="desserts">Desery</button>
                 </div>
                 
-                <!-- Pozostałe kategorie menu -->
+                <div class="swiper pizza-slider">
+                    <div class="swiper-wrapper">
+                        <!-- Pizza 1 -->
+                        <div class="swiper-slide">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="/1.png" alt="Pizza Margherita" >
+                                </div>
+                                <div class="menu-item-details">
+                                    <h3>Margherita <span class="price">29 zł</span></h3>
+                                    <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                                    <button class="add-to-cart">Dodaj do koszyka</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pizza 2 -->
+                        <div class="swiper-slide">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="/2.png" alt="Pizza Pepperoni" >
+                                </div>
+                                <div class="menu-item-details">
+                                    <h3>Pepperoni <span class="price">35 zł</span></h3>
+                                    <p class="ingredients">Sos pomidorowy, mozzarella, pepperoni, oregano</p>
+                                    <button class="add-to-cart">Dodaj do koszyka</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="/3.png" alt="Pizza Margherita" >
+                                </div>
+                                <div class="menu-item-details">
+                                    <h3>Margherita <span class="price">59 zł</span></h3>
+                                    <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                                    <button class="add-to-cart">Dodaj do koszyka</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="/2.png" alt="Pizza Margherita" >
+                                </div>
+                                <div class="menu-item-details">
+                                    <h3>Margherita <span class="price">19 zł</span></h3>
+                                    <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                                    <button class="add-to-cart">Dodaj do koszyka</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="menu-item">
+                                <div class="menu-item-image">
+                                    <img src="/3.png" alt="Pizza Margherita" >
+                                </div>
+                                <div class="menu-item-details">
+                                    <h3>Margherita <span class="price">59 zł</span></h3>
+                                    <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                                    <button class="add-to-cart">Dodaj do koszyka</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dodaj więcej pizz (łącznie 6 lub więcej) -->
+                        
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
             </div>
         </section>
         
@@ -144,16 +235,16 @@
                 </div>
                 <div class="menu-items">
                     <div class="menu-item">
-                        <img src="pizza1.jpg" alt="Pizza Margherita" loading="lazy">
+                        <img src="pizza1.jpg" alt="Pizza Margherita" >
                     </div>
                     <div class="menu-item">
-                        <img src="pasta.jpg" alt="Pasta" loading="lazy">
+                        <img src="pasta.jpg" alt="Pasta" >
                     </div>
                     <div class="menu-item">
-                        <img src="salad.jpg" alt="Sałatka" loading="lazy">
+                        <img src="salad.jpg" alt="Sałatka" >
                     </div>
                     <div class="menu-item">
-                        <img src="dessert.jpg" alt="Deser" loading="lazy">
+                        <img src="dessert.jpg" alt="Deser" >
                     </div>
                 </div>
                 <a href="#full-menu" class="btn-primary">ZOBACZ MENU</a>
@@ -193,7 +284,7 @@
                             height="450" 
                             style="border:0;" 
                             allowfullscreen="" 
-                            loading="lazy" 
+                             
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                         <a href="https://www.google.com/maps/place/Na+Okr%C4%85g%C5%82o/@54.1259931,20.5727422,17z/data=!3m1!4b1!4m6!3m5!1s0x46e2f54765274c27:0x71490dfabae87972!8m2!3d54.1259901!4d20.5776131!16s%2Fg%2F11syrf312q" class="btn-navigate" target="_blank">Nawiguj</a>
@@ -218,7 +309,7 @@
                 <h2>NASZA HISTORIA</h2>
                 <div class="story-container">
                     <div class="story-image">
-                        <img src="https://piotrholowienko.github.io/naokroglo/9d274049-2841-42c7-b6d8-2653872b17f4.png" alt="Założyciele Na okrągło">
+                        <img src="/9d274049-2841-42c7-b6d8-2653872b17f4.png" alt="Założyciele Na okrągło">
                     </div>
                     <div class="story-content">
                         <h3>Od pasji do biznesu</h3>
@@ -274,16 +365,16 @@
                 <p>Podziel się swoimi wrażeniami na mediach społecznościowych i oznacz nas!</p>
                 <div class="social-grid">
                     <div class="social-item">
-                        <img src="social1.jpg" alt="Social media post" loading="lazy">
+                        <img src="social1.jpg" alt="Social media post" >
                     </div>
                     <div class="social-item">
-                        <img src="social2.jpg" alt="Social media post" loading="lazy">
+                        <img src="social2.jpg" alt="Social media post" >
                     </div>
                     <div class="social-item">
-                        <img src="social3.jpg" alt="Social media post" loading="lazy">
+                        <img src="social3.jpg" alt="Social media post" >
                     </div>
                     <div class="social-item">
-                        <img src="social4.jpg" alt="Social media post" loading="lazy">
+                        <img src="social4.jpg" alt="Social media post" >
                     </div>
                 </div>
             </div>
@@ -294,7 +385,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="https://piotrholowienko.github.io/naokroglo/logo.jpg" alt="Na okrągło Logo" class="logo">
+                    <img src="/logo.jpg" alt="Na okrągło Logo" class="logo">
                     <p>ZAWSZE ŚWIEŻO!</p>
                 </div>
                 <div class="footer-links">

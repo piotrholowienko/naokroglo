@@ -121,6 +121,33 @@ document.addEventListener('DOMContentLoaded', function() {
 document.fonts.ready.then(() => {
     document.documentElement.classList.add('fonts-loaded');
 });
+// Inicjalizacja slidera pizzy
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.querySelector('.pizza-slider')) {
+        const pizzaSlider = new Swiper('.pizza-slider', {
+            slidesPerView: 4,
+            spaceBetween: 20,
+            loop: true,
+            
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // Gdy szerokość okna < 768px (mobile)
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                // Gdy szerokość okna >= 768px (desktop)
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                }
+            }
+        });
+    }
+});
 
 // Obsługa schema.org dla SEO
 function addJsonLd() {
