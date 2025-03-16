@@ -144,7 +144,7 @@
 }
 
 .btn-call {
-    background-color: #4CAF50;
+    background-color: #b90b0b;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
@@ -665,7 +665,7 @@
 
 .menu-item-image img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
 }
 
