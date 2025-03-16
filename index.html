@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Autentyczna włoska pizzeria oferująca darmową dostawę. Spróbuj naszych tradycyjnych włoskich dań przygotowanych z miłością.">
+    <title>Na okrągło - Autentyczna Włoska Pizzeria</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="logo-container">
+            <img src="/logo.jpg" alt="Na okrągło Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#menu" class="btn-menu">Co gotujemy?</a></li>
+                <li><a href="#location" class="btn-location">Jak nas znaleźć?</a></li>
+                <li><a href="tel:0048575757022" class="btn-call">Zadzwoń i zamów z odbiorem</a></li>
+                
+                <!-- <li><a href="#order" class="btn-order">Zamów online</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="logo-container-hero">
+                        <img src="/logo.jpg" alt="Na okrągło Logo" class="logo">
+                    </div>
+                    <h1>Najlepsza pizza w Lidzbarku Warmińskim</h1>
+                    <p>Świeże składniki, autentyczne włoskie smaki, prosto od producentów z Italii.</p>
+                    <a href="#order" class="btn-primary">ZAMÓW TERAZ Z ODBIOREM</a>
+                </div>
+                <div class="hero-image">
+                    <img src="/tlo.jpeg" alt="Pyszna włoska pizza">
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="about" id="about">
+            <div class="container">
+                <h2>Na okrągło</h2>
+                <p>Nasza pizzeria powstała z prawdziwej miłości do włoskiego jedzenia. Wykorzystujemy wyłącznie najlepsze składniki i przepisy przekazywane z pokolenia na pokolenie, aby dostarczyć Ci smak prawdziwych Włoch.</p>
+                <a href="#story" class="btn-secondary">POZNAJ NAS</a>
+            </div>
+        </section> -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2>NASZE MENU</h2>
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="pizza">Pizza</button>
+                    <button class="category-btn" data-category="pasta">Makarony</button>
+                    <button class="category-btn" data-category="salads">Sałatki</button>
+                    <button class="category-btn" data-category="desserts">Desery</button>
+                </div>
+                
+                <div class="menu-items-container active" id="pizza-menu">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="margherita.jpg" alt="Pizza Margherita" loading="lazy">
+                        </div>
+                        <div class="menu-item-details">
+                            <h3>Margherita <span class="price">29 zł</span></h3>
+                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="pepperoni.jpg" alt="Pizza Pepperoni" loading="lazy">
+                        </div>
+                        <div class="menu-item-details">
+                            <h3>Pepperoni <span class="price">35 zł</span></h3>
+                            <p class="ingredients">Sos pomidorowy, mozzarella, pepperoni, oregano</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="margherita.jpg" alt="Pizza Margherita" loading="lazy">
+                        </div>
+                        <div class="menu-item-details">
+                            <h3>Margherita <span class="price">29 zł</span></h3>
+                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="margherita.jpg" alt="Pizza Margherita" loading="lazy">
+                        </div>
+                        <div class="menu-item-details">
+                            <h3>Margherita <span class="price">29 zł</span></h3>
+                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="margherita.jpg" alt="Pizza Margherita" loading="lazy">
+                        </div>
+                        <div class="menu-item-details">
+                            <h3>Margherita <span class="price">29 zł</span></h3>
+                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                        </div>
+                    </div>
+
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="margherita.jpg" alt="Pizza Margherita" loading="lazy">
+                        </div>
+                        <div class="menu-item-details">
+                            <h3>Margherita <span class="price">29 zł</span></h3>
+                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Więcej pozycji menu -->
+                </div>
+                
+                <!-- Pozostałe kategorie menu -->
+            </div>
+        </section>
+        
+        <!-- <section class="menu-preview" id="menu">
+            <div class="container bento-grid">
+                <div class="section-header">
+                    <h2>NASZE MENU</h2>
+                    <p>Odkryj nasze wyjątkowe dania przygotowane z pasją i najlepszych składników</p>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="pizza1.jpg" alt="Pizza Margherita" loading="lazy">
+                    </div>
+                    <div class="menu-item">
+                        <img src="pasta.jpg" alt="Pasta" loading="lazy">
+                    </div>
+                    <div class="menu-item">
+                        <img src="salad.jpg" alt="Sałatka" loading="lazy">
+                    </div>
+                    <div class="menu-item">
+                        <img src="dessert.jpg" alt="Deser" loading="lazy">
+                    </div>
+                </div>
+                <a href="#full-menu" class="btn-primary">ZOBACZ MENU</a>
+            </div>
+        </section>
+
+        <section class="catering" id="catering">
+            <div class="container">
+                <h2>CATERING & IMPREZY</h2>
+                <p>Na okrągło to idealne rozwiązanie na Twoje specjalne okazje, firmowe spotkania czy bankiety. Oferujemy catering na imprezy, przyjęcia urodzinowe, wesela i wiele więcej.</p>
+                <a href="#catering-info" class="btn-primary">DOWIEDZ SIĘ WIĘCEJ</a>
+            </div>
+        </section> -->
+
+        <!-- <section class="vip" id="vip">
+            <div class="container">
+                <div class="vip-card">
+                    <h2>DOŁĄCZ DO VIP FAMIGLIA</h2>
+                    <p>Odbierz darmową pizzę na urodziny i wiele więcej!</p>
+                    <form id="vip-form" class="vip-form">
+                        <input type="text" placeholder="Imię i nazwisko" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Telefon" required>
+                        <button type="submit" class="btn-primary">WYŚLIJ</button>
+                    </form>
+                </div>
+            </div>
+        </section> -->
+        <section id="location" class="location-section">
+            <div class="container">
+                <h2>ZNAJDŹ NAS</h2>
+                <div class="location-container">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2315.5010775384473!2d20.575038376916773!3d54.12599307989251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e2f54765274c27%3A0x71490dfabae87972!2sNa%20Okr%C4%85g%C5%82o!5e0!3m2!1spl!2spl!4v1710589326619!5m2!1spl!2spl" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <a href="https://www.google.com/maps/place/Na+Okr%C4%85g%C5%82o/@54.1259931,20.5727422,17z/data=!3m1!4b1!4m6!3m5!1s0x46e2f54765274c27:0x71490dfabae87972!8m2!3d54.1259901!4d20.5776131!16s%2Fg%2F11syrf312q" class="btn-navigate" target="_blank">Nawiguj</a>
+                    </div>
+                    <div class="location-details">
+                        <h3>Na Okrągło</h3><br>
+                        <p>ul. Dębowa 5<br>11-100 Lidzbark Warmiński</p>
+                        <p>tel: <a href="tel:0048575757022">575 757 022</a></p>
+                        <div class="opening-hours">
+                            <h4>Godziny otwarcia:</h4>
+                            <p>Poniedziałek - Niedziela: 12:00 - 21:00</p>
+                        </div>
+                        <a href="https://www.google.com/search?sca_esv=00a258cd6790dc01&rlz=1C1GCEA_enPL1101PL1101&q=na+okrogla+pizza+lidzbark&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2Kzes2fXXngYVRfbW0p-v6M6jEwx1LdQvzAzWVh7H_4vCiOQpiOq29DnUUduNc2yK3VIv_2gM%3D&uds=ABqPDvxpkLLAJEhdE2OSBlj52v8qFqJtlwSTJ20f2m8Xb47MjONNwFwzyJqBGtw69nWR_7sjfXx13P70HK22jULF0B_6GRi1OTg2s_7QL-sdU15Gb1wLhMRSkH3UXstSfZizfDMju0S7&sa=X&ved=2ahUKEwjtn62tpo6MAxWvGhAIHW7gDf8Q3PALegQIEBAE&biw=1920&bih=945&dpr=1" class="btn-review" target="_blank">Dodaj opinię</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="story" class="story-section">
+            <div class="container">
+                <h2>NASZA HISTORIA</h2>
+                <div class="story-container">
+                    <div class="story-image">
+                        <img src="/9d274049-2841-42c7-b6d8-2653872b17f4.png" alt="Założyciele Na okrągło">
+                    </div>
+                    <div class="story-content">
+                        <h3>Od pasji do biznesu</h3>
+                        <p>Na okrągło powstało w 2010 roku z inicjatywy Marii i Roberta Kowalskich, którzy podczas podróży po Włoszech zakochali się w tradycyjnej włoskiej kuchni.</p>
+                        <p>Po powrocie do Polski postanowili podzielić się swoją pasją i autentycznymi smakami Italii, otwierając małą pizzerię w centrum Warszawy.</p>
+                        <p>Dziś, po 15 latach działalności, Na okrągło to jedno z najbardziej rozpoznawalnych miejsc na kulinarnej mapie miasta, gdzie nadal serwujemy pizzę przygotowaną według oryginalnych włoskich receptur.</p>
+                        <blockquote>"Nasza misja jest prosta - przynieść kawałek Włoch do Polski i dzielić się miłością do dobrego jedzenia."</blockquote>
+                        <p class="quote-author">Małgosia i Piotr Bączek, Założyciele</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <h2>OPINIE NASZYCH GOŚCI</h2>
+                <p class="reviews-intro">Sprawdź co mówią o nas nasi goście lub podziel się swoją opinią!</p>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Zawsze świeża i gorąca pizza, ciasto jest perfekcyjnie wypieczone a składniki najwyższej jakości. Obsługa zawsze miła i pomocna. Zdecydowanie najlepsza pizzeria w mieście!"</p>
+                        <p class="review-author">- Anna K.</p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Ich pizza Margherita to prawdziwa włoska klasyka! Sos pomidorowy ma idealny balans słodyczy i kwasowości, a mozzarella jest kremowa i ciągnąca. Polecam każdemu, kto ceni autentyczne włoskie smaki."</p>
+                        <p class="review-author">- Marek W.</p>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Byliśmy na kolacji rodzinnej i wszyscy wyszliśmy zachwyceni. Pizza była doskonała, obsługa przyjazna i atmosfera przytulna. Dzieci były zachwycone deserami. Na pewno wrócimy!"</p>
+                        <p class="review-author">- Karolina i Tomasz B.</p>
+                    </div>
+                </div>
+                
+                <div id="google-reviews"></div>
+                
+                <div class="add-review-container">
+                    <a href="https://g.page/r/made-in-italy/review" class="btn-add-review" target="_blank">
+                        Dodaj swoją opinię na Google
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+                
+        
+        <section class="social" id="social">
+            <div class="container">
+                <h2>@naokraglo_restaurant</h2>
+                <p>Podziel się swoimi wrażeniami na mediach społecznościowych i oznacz nas!</p>
+                <div class="social-grid">
+                    <div class="social-item">
+                        <img src="social1.jpg" alt="Social media post" loading="lazy">
+                    </div>
+                    <div class="social-item">
+                        <img src="social2.jpg" alt="Social media post" loading="lazy">
+                    </div>
+                    <div class="social-item">
+                        <img src="social3.jpg" alt="Social media post" loading="lazy">
+                    </div>
+                    <div class="social-item">
+                        <img src="social4.jpg" alt="Social media post" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/logo.jpg" alt="Na okrągło Logo" class="logo">
+                    <p>ZAWSZE ŚWIEŻO!</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>MENU</h3>
+                        <ul>
+                            <li><a href="#pizza">Pizza</a></li>
+                            <li><a href="#pasta">Makarony</a></li>
+                            <li><a href="#salads">Sałatki</a></li>
+                            <li><a href="#desserts">Desery</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="footer-column">
+                        <h3>CATERING</h3>
+                        <ul>
+                            <li><a href="#events">Wydarzenia</a></li>
+                            <li><a href="#corporate">Firmowe</a></li>
+                            <li><a href="#weddings">Wesela</a></li>
+                        </ul>
+                    </div> -->
+                    <div class="footer-column">
+                        <h3>KONTAKT</h3>
+                        <ul>
+                            <li>ul.Dębowa 5</li>
+                            <li>11-100 Lidzbark Warmiński</li>
+                            <li>tel: 575 757 022</li>
+                            <li>email: info@naokraglo.pl</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/Na-Okr%C4%85g%C5%82o-108020918499273" aria-label="Facebook"><span class="social-icon facebook"></span></a>
+                    <a href="https://www.instagram.com/naokraglo_restaurant/" aria-label="Instagram"><span class="social-icon instagram"></span></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Na okrągło - Wszelkie prawa zastrzeżone</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
