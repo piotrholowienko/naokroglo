@@ -193,6 +193,29 @@ function addJsonLd() {
     document.head.appendChild(script);
 }
 
+// Sticky header z logo pojawiającym się po zescrollowaniu
+const header = document.querySelector('header');
+const heroSection = document.querySelector('.hero');
+const logoInHeader = document.querySelector('header .logo');
+
+window.addEventListener('scroll', function() {
+  if (heroSection) {
+    const heroHeight = heroSection.offsetHeight;
+    const scrollPosition = window.scrollY;
+    
+    if (scrollPosition > (heroHeight * 0.7)) {
+      header.classList.add('sticky-active');
+      if (window.innerWidth > 768) {
+        logoInHeader.style.display = 'block';
+      }
+    } else {
+      header.classList.remove('sticky-active');
+      logoInHeader.style.display = 'none';
+    }
+  }
+});
+
+
 // Inicjalizacja mapy Google
 function initMap() {
     const pizzeriaLocation = { lat: 52.2297, lng: 21.0122 }; // Współrzędne Warszawy (przykład)
