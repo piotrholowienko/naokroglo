@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Autentyczna włoska pizzeria oferująca darmową dostawę. Spróbuj naszych tradycyjnych włoskich dań przygotowanych z miłością.">
     <title>Na okrągło - Autentyczna Włoska Pizzeria</title>
-    <link rel="stylesheet" href="https://piotrholowienko.github.io/naokroglo//styles.css">
+    <link rel="stylesheet" href="https://piotrholowienko.github.io/naokroglo/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script defer src="https://piotrholowienko.github.io/naokroglo//script.js"></script>
+    <script defer src="https://piotrholowienko.github.io/naokroglo/script.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -17,7 +17,7 @@
 <body>
     <header class="sticky-header">
         <div class="logo-container">
-            <img src="https://piotrholowienko.github.io/naokroglo//logo.jpg" alt="Na okrągło Logo" class="logo">
+            <img src="https://piotrholowienko.github.io/naokroglo/logo.jpg" alt="Na okrągło Logo" class="logo">
         </div>
         <nav>
             <ul>
@@ -35,14 +35,14 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <div class="logo-container-hero">
-                        <img src="https://piotrholowienko.github.io/naokroglo//logo.jpg" alt="Na okrągło Logo" class="logo">
+                        <img src="https://piotrholowienko.github.io/naokroglo/logo.jpg" alt="Na okrągło Logo" class="logo">
                     </div>
                     <h1>Najlepsza pizza w Lidzbarku Warmińskim</h1>
                     <p>Świeże składniki, autentyczne włoskie smaki, prosto od producentów z Italii.</p>
                     <a href="#order" class="btn-primary">ZAMÓW TERAZ Z ODBIOREM</a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://piotrholowienko.github.io/naokroglo//tlo.jpeg" alt="Pyszna włoska pizza">
+                    <img src="https://piotrholowienko.github.io/naokroglo/tlo.jpeg" alt="Pyszna włoska pizza">
                 </div>
             </div>
         </section>
@@ -65,80 +65,395 @@
                     <button class="category-btn" data-category="desserts">Desery</button>
                 </div>
                 
-                <div class="menu-items-container active" id="pizza-menu">
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/1.png" alt="Pizza Margherita">
-                        </div>
-                        <div class="menu-item-details">
-                            <h3>Margherita <span class="price">29 zł</span></h3>
-                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
-                            <button class="add-to-cart">Dodaj do koszyka</button>
-                        </div>
+                <div class="filter-container filters-visible" style="display: none;">
+                    <div class="filter-title">Filtruj pizze:</div>
+                    <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                    <button class="filter-btn vege-filter" data-filter="vege">Wegetariańskie 🌿</button>
+                    <button class="filter-btn spicy-filter" data-filter="spicy">Pikantne 🌶️</button>
+                    <button class="filter-btn rosa-filter" data-filter="rosa">Sos pomidorowy</button>
+                    <button class="filter-btn bianca-filter" data-filter="bianca">Sos śmietanowy</button>
+                    <button class="filter-btn meat-filter" data-filter="meat">Z mięsem</button>
+                </div>
+                  
+                <div class="menu-items-container active pizzas-container" data-category="pizza">
+                    <div class="menu-item vege rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/1.png" alt="Pizza Margherita">
+                       
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>1. MARGHERITA 🌿<span>30,-</span></h3>
+                        <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, świeża bazylia, oliwa EV</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
                     </div>
                     
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/2.png" alt="Pizza Pepperoni" >
-                        </div>
-                        <div class="menu-item-details">
-                            <h3>Pepperoni <span class="price">35 zł</span></h3>
-                            <p class="ingredients">Sos pomidorowy, mozzarella, pepperoni, oregano</p>
-                            <button class="add-to-cart">Dodaj do koszyka</button>
-                        </div>
+                    <div class="menu-item spicy rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/2.png" alt="Pizza Gamberita">
+                        
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>2. GAMBERITA 🌶️<span>51,-</span></h3>
+                        <p class="ingredients">sos marinara, mozzarella fior di latte, krewetki tygrysie 6 szt., świeży czosnek, peperoncino suszone, pomidor cherry, natka pietruszki</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
                     </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/3.png" alt="Pizza Margherita" >
-                        </div>
-                        <div class="menu-item-details">
-                            <h3>Margherita <span class="price">29 zł</span></h3>
-                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
-                            <button class="add-to-cart">Dodaj do koszyka</button>
-                        </div>
+                    
+                    <div class="menu-item meat rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/3.png" alt="Pizza Salame">
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>3. SALAME <span>36,-</span></h3>
+                        <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, salami milano, czarna oliwka</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
                     </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/2.png" alt="Pizza Margherita" >
-                        </div>
-                        <div class="menu-item-details">
-                            <h3>Margherita <span class="price">29 zł</span></h3>
-                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
-                            <button class="add-to-cart">Dodaj do koszyka</button>
-                        </div>
+                    
+                    <div class="menu-item spicy meat rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/4.png" alt="Pizza Salame Piccante">
+                        
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>4. SALAME PICCANTE 🌶️🌶️<span>40,-</span></h3>
+                        <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, salami spianata piccante, peperoncino suszone, karmelizowana czerwona cebula</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
                     </div>
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/3.png" alt="Pizza Margherita" >
-                        </div>
-                        <div class="menu-item-details">
-                            <h3>Margherita <span class="price">29 zł</span></h3>
-                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
-                            <button class="add-to-cart">Dodaj do koszyka</button>
-                        </div>
+                    
+                    <div class="menu-item spicy meat rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/5.png" alt="Pizza Nduja">
+                        
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>5. NDUJA 🌶️<span>38,-</span></h3>
+                        <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, nduja, ricotta, rukola</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
                     </div>
-
-
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/1.png" alt="Pizza Margherita" >
-                        </div>
-                        <div class="menu-item-details">
-                            <h3>Margherita <span class="price">29 zł</span></h3>
-                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
-                            <button class="add-to-cart">Dodaj do koszyka</button>
-                        </div>
+                    
+                    <div class="menu-item meat bianca">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/6.png" alt="Pizza Fungo">
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>6. FUNGO <span>43,-</span></h3>
+                        <p class="ingredients">creme fraiche, mozzarella fior di latte, salsiccia veneto, natka pietruszki, kurki smażone na maśle z białą cebulą i czosnkiem</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
                     </div>
-                
+                    
+                    <div class="menu-item meat bianca">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/7.png" alt="Pizza Tartufo">
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>7. TARTUFO <span>42,-</span></h3>
+                        <p class="ingredients">creme fraiche, mozzarella fior di latte, Prosciutto Crudo, oliwa truflowa EV, pieczarka marynowana w rozmarynie i sosie sojowym, świeża bazylia</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-item meat bianca">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/8.png" alt="Pizza Carne">
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>8. CARNE <span>43,-</span></h3>
+                        <p class="ingredients">creme fraiche, mozzarella fior di latte, salami milano, salami spianata piccante, salsiccia veneto, karmelizowana czerwona cebula</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-item meat rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/9.png" alt="Pizza Capricciosa">
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>9. CAPRICCIOSA <span>38,-</span></h3>
+                        <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, szynka cotto, czarna oliwka, pieczarka marynowana w rozmarynie i sosie sojowym</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-item vege bianca">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/10.png" alt="Pizza Formaggi">
+                       
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>10. FORMAGGI 🌿<span>40,-</span></h3>
+                        <p class="ingredients">creme fraiche, mozzarella fior di latte, gorgonzola DOP, grana padano DOP, ricotta, świeżo mielony pieprz</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-item vege bianca">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/11.png" alt="Pizza Pera">
+                       
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>11. PERA 🌿<span>39,-</span></h3>
+                        <p class="ingredients">creme fraiche, mozzarella fior di latte, gorgonzola DOP, karmelizowana gruszka, orzech włoski</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-item meat rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/12.png" alt="Pizza Cotto">
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>12. COTTO <span>39,-</span></h3>
+                        <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, szynka cotto, karczoch, pomidor cherry</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-item vege rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/13.png" alt="Pizza Burattina">
+                       
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>13. BURATTINA 🌿<span>44,-</span></h3>
+                        <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, burrata di bufala 125 g, pesto domowe, pomidor półsuszony, świeża bazylia</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-item meat rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/14.png" alt="Pizza Crudo">
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>14. CRUDO <span>44,-</span></h3>
+                        <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, Prosciutto Crudo, rukola, pomidor cherry, grana padano DOP</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-item spicy meat bianca">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/15.png" alt="Pizza Spianatina">
+                        
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>15. SPIANATINA 🌶️<span>41,-</span></h3>
+                        <p class="ingredients">creme fraiche, mozzarella fior di latte, nduja, salami spianata piccante, miód, mascarpone</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
+                    
+                    <div class="menu-item meat rosa">
+                      <div class="menu-item-image">
+                        <img src="https://piotrholowienko.github.io/naokroglo/16.png" alt="Pizza Bufala">
+                      </div>
+                      <div class="menu-item-details">
+                        <h3>16. BUFALA <span>46,-</span></h3>
+                        <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, burrata di bufala 125 g, Prosciutto Crudo, rukola, pomidor półsuszony</p>
+                        <button class="add-to-cart">Dodaj do koszyka</button>
+                      </div>
+                    </div>
                 </div>
+                
+              
+                <!-- <div class="menu-items-container active" id="pizza-menu">
+                    
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/1.png" alt="Pizza Margherita">
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>1. Margherita 🌿<span>30 zł</span></h3>
+                            <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, świeża bazylia, oliwa EV</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/2.png" alt="Pizza Gamberita">
+                           
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>2. Gamberita 🌶️<span>51 zł</span></h3>
+                            <p class="ingredients">sos marinara, mozzarella fior di latte, krewetki tygrysie 6 szt., świeży czosnek, peperoncino suszone, pomidor cherry, natka pietruszki</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/3.png" alt="Pizza Salame">
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>3. Salame <span>36 zł</span></h3>
+                            <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, salami milano, czarna oliwka</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/4.png" alt="Pizza Salame Piccante">
+                            
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>4. Salame Piccante 🌶️🌶️<span>40 zł</span></h3>
+                            <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, salami spianata piccante, peperoncino suszone, karmelizowana czerwona cebula</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/5.png" alt="Pizza Nduja">
+                            
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>5. Nduja 🌶️<span>38 zł</span></h3>
+                            <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, nduja, ricotta, rukola</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/6.png" alt="Pizza Fungo">
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>6. Fungo <span>43 zł</span></h3>
+                            <p class="ingredients">creme fraiche, mozzarella fior di latte, salsiccia veneto, natka pietruszki, kurki smażone na maśle z białą cebulą i czosnkiem</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/7.png" alt="Pizza Tartufo">
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>7. Tartufo <span>42 zł</span></h3>
+                            <p class="ingredients">creme fraiche, mozzarella fior di latte, Prosciutto Crudo, oliwa truflowa EV, pieczarka marynowana w rozmarynie i sosie sojowym, świeża bazylia</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/8.png" alt="Pizza Carne">
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>8. Carne <span>43 zł</span></h3>
+                            <p class="ingredients">creme fraiche, mozzarella fior di latte, salami milano, salami spianata piccante, salsiccia veneto, karmelizowana czerwona cebula</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/9.png" alt="Pizza Capricciosa">
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>9. Capricciosa <span>38 zł</span></h3>
+                            <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, szynka cotto, czarna oliwka, pieczarka marynowana w rozmarynie i sosie sojowym</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/10.png" alt="Pizza Formaggi">
+                            
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>10. Formaggi 🌿<span>40 zł</span></h3>
+                            <p class="ingredients">creme fraiche, mozzarella fior di latte, gorgonzola DOP, grana padano DOP, ricotta, świeżo mielony pieprz</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/11.png" alt="Pizza Pera">
+                           
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>11. Pera 🌿<span>39 zł</span></h3>
+                            <p class="ingredients">creme fraiche, mozzarella fior di latte, gorgonzola DOP, karmelizowana gruszka, orzech włoski</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/12.png" alt="Pizza Cotto">
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>12. Cotto <span>39 zł</span></h3>
+                            <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, szynka cotto, karczochy, pomidor cherry</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/13.png" alt="Pizza Burattina">
+                           
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>13. Burattina 🌿<span>44 zł</span></h3>
+                            <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, burrata di bufala 125 g, pesto domowe, pomidor półsuszony, świeża bazylia</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/14.png" alt="Pizza Crudo">
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>14. Crudo <span>44 zł</span></h3>
+                            <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, Prosciutto Crudo, rukola, pomidor cherry, grana padano DOP</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/15.png" alt="Pizza Spianatina">
+                            
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>15. Spianatina 🌶️<span>41 zł</span></h3>
+                            <p class="ingredients">creme fraiche, mozzarella fior di latte, nduja, salami spianata piccante, miód, mascarpone</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                        
+                        <div class="menu-item">
+                          <div class="menu-item-image">
+                            <img src="https://piotrholowienko.github.io/naokroglo/16.png" alt="Pizza Bufala">
+                          </div>
+                          <div class="menu-item-details">
+                            <h3>16. Bufala <span>46 zł</span></h3>
+                            <p class="ingredients">pomidory San Marzano, mozzarella fior di latte, burrata di bufala 125 g, Prosciutto Crudo, rukola, pomidor półsuszony</p>
+                            <button class="add-to-cart">Dodaj do koszyka</button>
+                          </div>
+                        </div>
+                     
+                
+                </div> -->
                 
                 <div class="menu-items-container" id="pasta-menu">
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/4.png" alt="Carbonara">
+                            <img src="https://piotrholowienko.github.io/naokroglo/m4.png" alt="Carbonara">
                         </div>
                         <div class="menu-item-details">
                             <h3>Carbonara <span class="price">19 zł</span></h3>
@@ -149,7 +464,7 @@
                     
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/5.png" alt="Bolognese" >
+                            <img src="https://piotrholowienko.github.io/naokroglo/m5.png" alt="Bolognese" >
                         </div>
                         <div class="menu-item-details">
                             <h3>Bolognese <span class="price">25 zł</span></h3>
@@ -160,7 +475,7 @@
 
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/6.png" alt="Lasagne" >
+                            <img src="https://piotrholowienko.github.io/naokroglo/m6.png" alt="Lasagne" >
                         </div>
                         <div class="menu-item-details">
                             <h3>Lasagne <span class="price">29 zł</span></h3>
@@ -174,7 +489,7 @@
                 <div class="menu-items-container" id="salads-menu">
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/7.png" alt="Cesar">
+                            <img src="https://piotrholowienko.github.io/naokroglo/s7.png" alt="Cesar">
                         </div>
                         <div class="menu-item-details">
                             <h3>Cesar <span class="price">19 zł</span></h3>
@@ -185,7 +500,7 @@
                     
                     <div class="menu-item">
                         <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/8.png" alt="Shrimps" >
+                            <img src="https://piotrholowienko.github.io/naokroglo/s8.png" alt="Shrimps" >
                         </div>
                         <div class="menu-item-details">
                             <h3>Shrimps <span class="price">25 zł</span></h3>
@@ -195,25 +510,11 @@
                     </div>
 
                 </div>
-                <div class="menu-items-container" id="desserts-menu">
-                    <div class="menu-item">
-                        <div class="menu-item-image">
-                            <img src="https://piotrholowienko.github.io/naokroglo/9.png" alt="Marakuja">
-                        </div>
-                        <div class="menu-item-details">
-                            <h3>Lemoniada Marakuja <span class="price">19 zł</span></h3>
-                            <p class="ingredients">Sos pomidorowy, mozzarella, bazylia, oliwa z oliwek</p>
-                            <button class="add-to-cart">Dodaj do koszyka</button>
-                        </div>
-                    </div>
-                    
-                
-
-                </div>
             </div>
         </section>
-
-        <section id="menu" class="menu-section">
+    
+            <!-- //slider -->
+        <section id="menu-slider" class="menu-section-slider">
             <div class="container">
                 <h2>NASZE MENU - slider</h2>
                 <div class="menu-categories">
@@ -225,7 +526,7 @@
                 
                 <div class="swiper pizza-slider">
                     <div class="swiper-wrapper">
-                        <!-- Pizza 1 -->
+                       
                         <div class="swiper-slide">
                             <div class="menu-item">
                                 <div class="menu-item-image">
@@ -239,7 +540,7 @@
                             </div>
                         </div>
                         
-                        <!-- Pizza 2 -->
+                      
                         <div class="swiper-slide">
                             <div class="menu-item">
                                 <div class="menu-item-image">
@@ -269,7 +570,7 @@
                         <div class="swiper-slide">
                             <div class="menu-item">
                                 <div class="menu-item-image">
-                                    <img src="https://piotrholowienko.github.io/naokroglo/2.png" alt="Pizza Margherita" >
+                                    <img src="https://piotrholowienko.github.io/naokroglo/4.png" alt="Pizza Margherita" >
                                 </div>
                                 <div class="menu-item-details">
                                     <h3>Margherita <span class="price">19 zł</span></h3>
@@ -282,7 +583,7 @@
                         <div class="swiper-slide">
                             <div class="menu-item">
                                 <div class="menu-item-image">
-                                    <img src="https://piotrholowienko.github.io/naokroglo/3.png" alt="Pizza Margherita" >
+                                    <img src="https://piotrholowienko.github.io/naokroglo/5.png" alt="Pizza Margherita" >
                                 </div>
                                 <div class="menu-item-details">
                                     <h3>Margherita <span class="price">59 zł</span></h3>
@@ -291,7 +592,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Dodaj więcej pizz (łącznie 6 lub więcej) -->
+                       
                         
                     </div>
                     
@@ -310,16 +611,16 @@
                 </div>
                 <div class="menu-items">
                     <div class="menu-item">
-                        <img src="pizza1.jpg" alt="Pizza Margherita" >
+                        <img src="https://piotrholowienko.github.io/naokroglopizza1.jpg" alt="Pizza Margherita" >
                     </div>
                     <div class="menu-item">
-                        <img src="pasta.jpg" alt="Pasta" >
+                        <img src="https://piotrholowienko.github.io/naokroglopasta.jpg" alt="Pasta" >
                     </div>
                     <div class="menu-item">
-                        <img src="salad.jpg" alt="Sałatka" >
+                        <img src="https://piotrholowienko.github.io/naokroglosalad.jpg" alt="Sałatka" >
                     </div>
                     <div class="menu-item">
-                        <img src="dessert.jpg" alt="Deser" >
+                        <img src="https://piotrholowienko.github.io/naokroglodessert.jpg" alt="Deser" >
                     </div>
                 </div>
                 <a href="#full-menu" class="btn-primary">ZOBACZ MENU</a>
@@ -384,7 +685,7 @@
                 <h2>NASZA HISTORIA</h2>
                 <div class="story-container">
                     <div class="story-image">
-                        <img src="https://piotrholowienko.github.io/naokroglo/9d274049-2841-42c7-b6d8-2653872b17f4.png" alt="Założyciele Na okrągło">
+                        <img src="/9d274049-2841-42c7-b6d8-2653872b17f4.png" alt="Założyciele Na okrągło">
                     </div>
                     <div class="story-content">
                         <h3>Od pasji do biznesu</h3>
@@ -425,7 +726,7 @@
                 <div id="google-reviews"></div>
                 
                 <div class="add-review-container">
-                    <a href="https://www.google.com/search?sca_esv=00a258cd6790dc01&rlz=1C1GCEA_enPL1101PL1101&q=na+okrogla+pizza+lidzbark&si=APYL9bs7Hg2KMLB-4tSoTdxuOx8BdRvHbByC_AuVpNyh0x2Kzes2fXXngYVRfbW0p-v6M6jEwx1LdQvzAzWVh7H_4vCiOQpiOq29DnUUduNc2yK3VIv_2gM%3D&uds=ABqPDvxpkLLAJEhdE2OSBlj52v8qFqJtlwSTJ20f2m8Xb47MjONNwFwzyJqBGtw69nWR_7sjfXx13P70HK22jULF0B_6GRi1OTg2s_7QL-sdU15Gb1wLhMRSkH3UXstSfZizfDMju0S7&sa=X&ved=2ahUKEwjtn62tpo6MAxWvGhAIHW7gDf8Q3PALegQIEBAE&biw=1920&bih=945&dpr=1" class="btn-add-review" target="_blank">
+                    <a href="https://g.page/r/made-in-italy/review" class="btn-add-review" target="_blank">
                         Dodaj swoją opinię na Google
                     </a>
                 </div>
@@ -497,7 +798,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Na Okrągło - Wszelkie prawa zastrzeżone</p>
+                <p>&copy; 2025 Na okrągło - Wszelkie prawa zastrzeżone</p>
             </div>
         </div>
     </footer>

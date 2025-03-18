@@ -251,27 +251,69 @@ function initMap() {
 document.addEventListener('DOMContentLoaded', function() {
     // Przełączanie kategorii menu
     const categoryButtons = document.querySelectorAll('.category-btn');
-    const menuContainers = document.querySelectorAll('.menu-items-container');
-    
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.dataset.category;
+const menuContainers = document.querySelectorAll('.menu-items-container');
+const pizzaFilterContainers = document.querySelector('.filter-container');
+const allPizzaFilter = document.querySelector('.filter-btn[data-filter="all"]'); // Dodajemy referencję do filtra "Wszystkie"
+const pizzaContainers = document.querySelector(".pizzas-container");
+
+categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.dataset.category;
+        
+        // Usuń aktywną klasę z wszystkich przycisków i kontenerów
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        menuContainers.forEach(container => container.classList.remove('active'));
+        
+        if(category != "pizza") {
+            pizzaFilterContainers.classList.remove('filters-visible');
+        } else {
+            pizzaFilterContainers.classList.add('filters-visible');
+            pizzaContainers.classList.add('active');
+            // Aktywuj filtr "Wszystkie" przy powrocie do kategorii pizza
+            if (allPizzaFilter) {
+                // Usuń aktywną klasę z wszystkich filtrów
+                document.querySelectorAll('.filter-btn').forEach(filter => {
+                    filter.classList.remove('active');
+                });
+                
+                // Dodaj aktywną klasę do filtra "Wszystkie"
+                allPizzaFilter.classList.add('active');
+                
+                // Pokaż wszystkie pizze (usuń klasę 'hidden' jeśli jest używana do ukrywania)
+                const pizzaItems = document.querySelectorAll('.pizzas-container .menu-item');
+                pizzaItems.forEach(item => {
+                    item.style.display = '';
+                });
+            }
+
+           
+            const pizzaItems = document.querySelectorAll('.pizzas-container .menu-item');
+        // Pokaż wszystkie pizze jeśli wybrano "all"
             
-            // Usuń aktywną klasę z wszystkich przycisków i kontenerów
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            menuContainers.forEach(container => container.classList.remove('active'));
+            pizzaItems.forEach(item => {
+                item.style.display = 'block';
+            });
             
-            // Dodaj aktywną klasę do klikniętego przycisku i odpowiedniego kontenera
-            button.classList.add('active');
-            document.getElementById(`${category}-menu`).classList.add('active');
-        });
+
+        }
+        
+        // Dodaj aktywną klasę do klikniętego przycisku
+        button.classList.add('active');
+
+        // Aktywuj odpowiedni kontener menu
+        const menuElement = document.getElementById(`${category}-menu`);
+        if (menuElement) {
+            menuElement.classList.add('active');
+        }
     });
+});
+
     
     // Inicjalizacja widgetu opinii Google
     if (document.getElementById('google-reviews')) {
         jQuery(document).ready(function() {
             $("#google-reviews").googlePlaces({
-                placeId: 'YOUR_PLACE_ID', // Zastąp swoim ID miejsca z Google
+                placeId: '/g/11syrf312q', // Zastąp swoim ID miejsca z Google
                 render: ['reviews'],
                 min_rating: 4,
                 max_rows: 4
@@ -280,6 +322,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
+//filtrowanie
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Przyciski filtrowania
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    // const pizzaItems = document.querySelectorAll('.menu-item');
+    const pizzaItems = document.querySelectorAll('.pizzas-container .menu-item');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+        
+        // Usuń klasę active ze wszystkich przycisków
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Dodaj klasę active do klikniętego przycisku
+        this.classList.add('active');
+        
+        // Pokaż wszystkie pizze jeśli wybrano "all"
+        if (filterValue === 'all') {
+          pizzaItems.forEach(item => {
+            item.style.display = 'block';
+          });
+        } else {
+          // Filtruj pizze według wybranej kategorii
+          pizzaItems.forEach(item => {
+            if (item.classList.contains(filterValue)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        }
+      });
+    });
+  });
+  
 
 // Wywołanie funkcji po załadowaniu strony
 window.addEventListener('load', addJsonLd);
