@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentYear = new Date().getFullYear();
     const copyrightElement = document.querySelector('.copyright p');
     if (copyrightElement) {
-        copyrightElement.textContent = `© ${currentYear} Na Okrągło - Wszelkie prawa zastrzeżone`;
+        copyrightElement.innerHTML = `© ${currentYear} Strony Internetowe dla Gastronomii<br>Piotr Hołowienko <a href="mailto:biuro@thisday.pl"> | <strong>biuro@thisday.pl</strong></a><br>Wszelkie prawa zastrzeżone`;
     }
 });
 
@@ -322,6 +322,29 @@ categoryButtons.forEach(button => {
     }
 });
 
+const menuPopupBtn = document.querySelector('.btn-menu-popup');
+const menuPopup = document.getElementById('menu-popup');
+const closePopupBtn = document.querySelector('.close-popup');
+
+// Otwórz popup po kliknięciu przycisku menu
+menuPopupBtn.addEventListener('click', function() {
+  menuPopup.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Zablokuj przewijanie strony
+});
+
+// Zamknij popup po kliknięciu przycisku zamknięcia
+closePopupBtn.addEventListener('click', function() {
+  menuPopup.classList.remove('active');
+  document.body.style.overflow = ''; // Przywróć przewijanie strony
+});
+
+// Zamknij popup po kliknięciu w tło
+menuPopup.addEventListener('click', function(e) {
+  if (e.target === menuPopup) {
+    menuPopup.classList.remove('active');
+    document.body.style.overflow = ''; // Przywróć przewijanie strony
+  }
+});
 
 //filtrowanie
 

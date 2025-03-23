@@ -21,15 +21,23 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#menu" class="btn-menu">Co gotujemy?</a></li>
-                <li><a href="#location" class="btn-location">Jak nas znaleźć?</a></li>
-                <li class="call-order-item"><a href="tel:0048575757022" class="btn-call">Zadzwoń i zamów z odbiorem</a></li>
+              <li class="menu-popup-item"><button class="btn-menu-popup">Menu</button></li>
+                <!-- <li><a href="#menu" class="btn-menu">Co gotujemy?</a></li> -->
+                <li><a href="#location" class="btn-location">Gdzie nas znaleźć?</a></li>
+                <li class="call-order-item"><a href="tel:0048575757022" class="btn-call"><svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM12 3v10l3-3h6V3h-9z"/>
+                </svg>&nbspZadzwoń i zamów z odbiorem</a></li>
                 
                 <!-- <li><a href="#order" class="btn-order">Zamów online</a></li> -->
             </ul>
         </nav>
     </header>
-    
+    <div id="menu-popup" class="menu-popup">
+      <div class="menu-popup-content">
+        <img src="/menu.png" alt="Menu Na Okrągło">
+        <button class="close-popup">&times;</button>
+      </div>
+    </div>
     <main>
         <section class="hero">
             <div class="hero-content">
@@ -739,21 +747,22 @@
             <div class="container">
                 <h2>@naokraglo_restaurant</h2>
                 <p>Podziel się swoimi wrażeniami na mediach społecznościowych i oznacz nas!</p>
-                <a href="https://www.instagram.com/naokraglo_restaurant/" terget="_blank">
+                
                     <div class="social-grid">
-                    <div class="social-item">
+                      <a href="https://www.instagram.com/naokraglo_restaurant/" terget="_blank">
+                        <div class="social-item">
                         <img src="https://piotrholowienko.github.io/naokroglo/instagram-naokraglo-1.jpg" alt="Social media post" >
-                    </div>
-                    <div class="social-item">
+                    </div></a>
+                    <a href="https://www.instagram.com/naokraglo_restaurant/" terget="_blank"><div class="social-item">
                         <img src="https://piotrholowienko.github.io/naokroglo/instagram-naokraglo-2.jpg" alt="Social media post" >
-                    </div>
-                    <div class="social-item">
+                    </div></a>
+                    <a href="https://www.instagram.com/naokraglo_restaurant/" terget="_blank"> <div class="social-item">
                         <img src="https://piotrholowienko.github.io/naokroglo/instagram-naokraglo-3.jpg" alt="Social media post" >
-                    </div>
-                    <div class="social-item">
+                    </div></a>
+                    <a href="https://www.instagram.com/naokraglo_restaurant/" terget="_blank"><div class="social-item">
                         <img src="https://piotrholowienko.github.io/naokroglo/instagram-naokraglo-5.jpg" alt="Social media post" >
-                    </div>
-                </a>
+                    </div></a>
+                
                 </div>
             </div>
         </section>
@@ -762,10 +771,13 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="https://piotrholowienko.github.io/naokroglo/logo.jpg" alt="Na okrągło Logo" class="logo">
-                    <p>ZAWSZE ŚWIEŻO!</p>
-                </div>
+              <div class="footer-logo">
+                <img src="https://piotrholowienko.github.io/naokroglo/logo.jpg" alt="Na okrągło Logo" class="logo">
+                <p>Potrzebujesz takiej <strong>strony dla swojej restauracji lub pizzeri?</strong> Napisz:</p>
+                <p><a href="mailto:biuro@thisday.pl"><strong>biuro@thisday.pl</strong></a></p>
+                <p><a href="sms:888167956">tel. <strong>888 167 956</strong></a></p>
+            </div>
+            
                 <div class="footer-links">
                     <div class="footer-column">
                         <h3>MENU</h3>
@@ -787,16 +799,24 @@
                     <div class="footer-column">
                         <h3>KONTAKT</h3>
                         <ul>
-                            <li>ul.Dębowa 5</li>
+                            <li>ul. Dębowa 5</li>
                             <li>11-100 Lidzbark Warmiński</li>
-                            <li>tel: 575 757 022</li>
-                            <li>email: info@naokraglo.pl</li>
+                            <li>tel: <a href="tel:575757022">575 757 022</a></li>
+                            <li>email: <a href="mailto:info@naokraglo.pl">info@naokraglo.pl</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/Na-Okr%C4%85g%C5%82o-108020918499273" aria-label="Facebook"><span class="social-icon facebook"></span></a>
-                    <a href="https://www.instagram.com/naokraglo_restaurant/" aria-label="Instagram"><span class="social-icon instagram"></span></a>
+                  <a href="https://www.facebook.com/Na-Okr%C4%85g%C5%82o-108020918499273" aria-label="Facebook">
+                    <span class="social-icon facebook">
+                      <img src="https://static.xx.fbcdn.net/rsrc.php/yx/r/e9sqr8WnkCf.ico" alt="Facebook" width="32" height="32">
+                    </span>
+                  </a>
+                  <a href="https://www.instagram.com/naokraglo_restaurant/" aria-label="Instagram">
+                    <span class="social-icon instagram">
+                      <img src="https://static.cdninstagram.com/rsrc.php/y4/r/QaBlI0OZiks.ico" alt="Instagram" width="32" height="32">
+                    </span>
+                  </a>
                 </div>
             </div>
             <div class="copyright">
